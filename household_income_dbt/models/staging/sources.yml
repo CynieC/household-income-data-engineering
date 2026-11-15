@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: household_data
+    database: dbt_household_data
+    schema: dbo
+    tables:
+      - name: household_transactions
+        columns:
+          - name: hh_ids
+            data_tests:
+              - not_null
+
+          - name: trx_date
+            data_tests:
+              - not_null

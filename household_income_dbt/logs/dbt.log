@@ -1,0 +1,1473 @@
+[0m17:07:42.048946 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A3964F8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A392D2DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A39585210>]}
+
+
+============================== 17:07:42.063750 | e2ed2603-66ab-4dff-bee0-9b2a6b1231cb ==============================
+[0m17:07:42.063750 [info ] [MainThread]: Running with dbt=1.11.11
+[0m17:07:42.065765 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\dbt_project\\household_income_pipeline\\household_income_dbt\\logs'}
+[0m17:07:42.296450 [info ] [MainThread]: dbt version: 1.11.11
+[0m17:07:42.330700 [info ] [MainThread]: python version: 3.11.2
+[0m17:07:42.400858 [info ] [MainThread]: python path: C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\python.exe
+[0m17:07:42.406927 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m17:07:42.962471 [info ] [MainThread]: Using profiles dir at C:\Users\ADMIN\.dbt
+[0m17:07:42.965000 [info ] [MainThread]: Using profiles.yml file at C:\Users\ADMIN\.dbt\profiles.yml
+[0m17:07:42.966511 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\dbt_project.yml
+[0m17:07:42.968531 [info ] [MainThread]: adapter type: sqlserver
+[0m17:07:42.969531 [info ] [MainThread]: adapter version: 1.10.0
+[0m17:07:43.237294 [info ] [MainThread]: Configuration:
+[0m17:07:43.240314 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:07:43.242301 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:07:43.245082 [info ] [MainThread]: Required dependencies:
+[0m17:07:43.247081 [debug] [MainThread]: Executing "git --help"
+[0m17:07:43.458402 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:07:43.461738 [debug] [MainThread]: STDERR: "b''"
+[0m17:07:43.463736 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:07:43.466752 [info ] [MainThread]: Connection:
+[0m17:07:43.467749 [info ] [MainThread]:   server: CYNIE\SQLEXPRESS
+[0m17:07:43.469747 [info ] [MainThread]:   port: 1433
+[0m17:07:43.470889 [info ] [MainThread]:   database: dbt_household_data
+[0m17:07:43.474933 [info ] [MainThread]:   schema: dbo
+[0m17:07:43.476949 [info ] [MainThread]:   UID: None
+[0m17:07:43.479956 [info ] [MainThread]:   authentication: Windows Login
+[0m17:07:43.481946 [info ] [MainThread]:   retries: 3
+[0m17:07:43.483944 [info ] [MainThread]:   login_timeout: 0
+[0m17:07:43.485959 [info ] [MainThread]:   query_timeout: 0
+[0m17:07:43.488138 [info ] [MainThread]:   trace_flag: False
+[0m17:07:43.491273 [info ] [MainThread]:   encrypt: True
+[0m17:07:43.494012 [info ] [MainThread]:   trust_cert: True
+[0m17:07:43.497034 [info ] [MainThread]: Registered adapter: sqlserver=1.10.0
+[0m17:07:44.537011 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m17:07:44.539012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'e2ed2603-66ab-4dff-bee0-9b2a6b1231cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A3AC1FD10>]}
+[0m17:07:44.541015 [debug] [MainThread]: Acquiring new sqlserver connection 'debug'
+[0m17:07:44.542012 [debug] [MainThread]: Using sqlserver connection "debug"
+[0m17:07:44.543012 [debug] [MainThread]: On debug: select 1 as id
+[0m17:07:44.544018 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:07:44.546014 [debug] [MainThread]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m17:07:44.837629 [debug] [MainThread]: sqlserver adapter: Connected to db: dbt_household_data
+[0m17:07:44.841641 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:07:44.845161 [debug] [MainThread]: On debug: Close
+[0m17:07:44.847163 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:07:44.849158 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:07:44.852157 [debug] [MainThread]: Command `dbt debug` succeeded at 17:07:44.852157 after 3.23 seconds
+[0m17:07:44.853671 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:07:44.854690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A326A9010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A3AC1EF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A326E9D10>]}
+[0m17:07:44.857711 [debug] [MainThread]: Flushing usage events
+[0m17:07:46.570305 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:18:25.514551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D990892F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D99062C650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D990892910>]}
+
+
+============================== 17:18:25.531675 | c46db4fc-bd2a-4d09-8a60-098a998cd2ef ==============================
+[0m17:18:25.531675 [info ] [MainThread]: Running with dbt=1.11.11
+[0m17:18:25.545840 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\dbt_project\\household_income_pipeline\\household_income_dbt\\logs'}
+[0m17:18:27.351269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c46db4fc-bd2a-4d09-8a60-098a998cd2ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D991CE10D0>]}
+[0m17:18:27.552863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c46db4fc-bd2a-4d09-8a60-098a998cd2ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D98F84C1D0>]}
+[0m17:18:27.554836 [info ] [MainThread]: Registered adapter: sqlserver=1.10.0
+[0m17:18:28.709262 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m17:18:28.711283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'c46db4fc-bd2a-4d09-8a60-098a998cd2ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9920D4B50>]}
+[0m17:18:28.820983 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m17:18:28.825166 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m17:18:28.828754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c46db4fc-bd2a-4d09-8a60-098a998cd2ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D991E00650>]}
+[0m17:18:35.421210 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses dbt-core's standard schema concatenation (`target.schema` + `_` + `custom_schema_name`). When False (default), uses legacy adapter behaviour: `custom_schema_name` is used directly without prefixing `target.schema`. For a permanent solution, override the `sqlserver__generate_schema_name` macro in your project instead.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_default_schema_concat` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m17:18:35.423206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'c46db4fc-bd2a-4d09-8a60-098a998cd2ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9920F5510>]}
+[0m17:18:36.060614 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.household_income_dbt.marts
+[0m17:18:36.106021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c46db4fc-bd2a-4d09-8a60-098a998cd2ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9922664D0>]}
+[0m17:18:36.389061 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\manifest.json
+[0m17:18:36.424317 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\semantic_manifest.json
+[0m17:18:36.468210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c46db4fc-bd2a-4d09-8a60-098a998cd2ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9925B3A10>]}
+[0m17:18:36.470210 [info ] [MainThread]: Found 1 model, 1 source, 522 macros
+[0m17:18:36.472209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c46db4fc-bd2a-4d09-8a60-098a998cd2ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D99222FA50>]}
+[0m17:18:36.479116 [info ] [MainThread]: 
+[0m17:18:36.480115 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:18:36.483697 [info ] [MainThread]: 
+[0m17:18:36.486100 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m17:18:36.493213 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_dbt_household_data'
+[0m17:18:36.572823 [debug] [ThreadPool]: dbt-sqlserver
+[0m17:18:36.574824 [debug] [ThreadPool]: Using sqlserver connection "list_dbt_household_data"
+[0m17:18:36.577342 [debug] [ThreadPool]: On list_dbt_household_data: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "connection_name": "list_dbt_household_data"} */
+USE [dbt_household_data];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m17:18:36.579356 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:18:36.581355 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m17:18:36.836844 [debug] [ThreadPool]: sqlserver adapter: Connected to db: dbt_household_data
+[0m17:18:36.859562 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:18:36.864974 [debug] [ThreadPool]: On list_dbt_household_data: Close
+[0m17:18:36.869021 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_dbt_household_data_dbo'
+[0m17:18:36.887883 [debug] [ThreadPool]: dbt-sqlserver
+[0m17:18:36.890418 [debug] [ThreadPool]: Using sqlserver connection "list_dbt_household_data_dbo"
+[0m17:18:36.891414 [debug] [ThreadPool]: On list_dbt_household_data_dbo: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "connection_name": "list_dbt_household_data_dbo"} */
+USE [dbt_household_data];
+    declare @schema_id int = schema_id('dbo');
+    select
+      DB_NAME() as [database],
+      t.name as [name],
+      'dbo' as [schema],
+      'table' as table_type
+    from sys.tables as t with (nolock)
+    where t.schema_id = @schema_id
+    union all
+    select
+      DB_NAME() as [database],
+      v.name as [name],
+      'dbo' as [schema],
+      'view' as table_type
+    from sys.views as v with (nolock)
+    where v.schema_id = @schema_id
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m17:18:36.893420 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:18:36.895623 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m17:18:36.897133 [debug] [ThreadPool]: sqlserver adapter: Connected to db: dbt_household_data
+[0m17:18:37.012286 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:18:37.016789 [debug] [ThreadPool]: On list_dbt_household_data_dbo: ROLLBACK
+[0m17:18:37.018808 [debug] [ThreadPool]: On list_dbt_household_data_dbo: Close
+[0m17:18:37.021815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c46db4fc-bd2a-4d09-8a60-098a998cd2ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9922168D0>]}
+[0m17:18:37.023815 [debug] [MainThread]: On master: COMMIT
+[0m17:18:37.046902 [debug] [Thread-1 (]: Began running node model.household_income_dbt.stg_household_transactions
+[0m17:18:37.049869 [info ] [Thread-1 (]: 1 of 1 START sql view model dbo.stg_household_transactions ..................... [RUN]
+[0m17:18:37.053202 [debug] [Thread-1 (]: Acquiring new sqlserver connection 'model.household_income_dbt.stg_household_transactions'
+[0m17:18:37.055281 [debug] [Thread-1 (]: Began compiling node model.household_income_dbt.stg_household_transactions
+[0m17:18:37.103317 [debug] [Thread-1 (]: Writing injected SQL for node "model.household_income_dbt.stg_household_transactions"
+[0m17:18:37.113818 [debug] [Thread-1 (]: Began executing node model.household_income_dbt.stg_household_transactions
+[0m17:18:37.409246 [debug] [Thread-1 (]: Writing runtime sql for node "model.household_income_dbt.stg_household_transactions"
+[0m17:18:37.418015 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m17:18:37.421637 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+USE [dbt_household_data];
+    
+    
+
+    
+
+    
+    USE [dbt_household_data];
+    EXEC('
+        CREATE OR ALTER VIEW "dbo"."stg_household_transactions" AS SELECT *
+FROM "dbt_household_data"."dbo"."household_transactions";
+    ')
+
+
+[0m17:18:37.423630 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:18:37.425642 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m17:18:37.429188 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: dbt_household_data
+[0m17:18:37.456754 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:18:37.540005 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: COMMIT
+[0m17:18:37.562813 [debug] [Thread-1 (]: Applying DROP to: "dbt_household_data"."dbo"."stg_household_transactions__dbt_backup"
+[0m17:18:37.589587 [debug] [Thread-1 (]: dbt-sqlserver
+[0m17:18:37.591603 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m17:18:37.597119 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+
+        USE [dbt_household_data];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'dbt_household_data'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'stg_household_transactions__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m17:18:37.665525 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:18:37.673183 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m17:18:37.674685 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+
+      
+      
+    
+    USE [dbt_household_data];
+    EXEC('DROP view IF EXISTS "dbo"."stg_household_transactions__dbt_backup";');
+
+[0m17:18:37.680132 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:18:37.685482 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: ROLLBACK
+[0m17:18:37.688060 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: Close
+[0m17:18:37.695196 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c46db4fc-bd2a-4d09-8a60-098a998cd2ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9924F0A10>]}
+[0m17:18:37.697731 [info ] [Thread-1 (]: 1 of 1 OK created sql view model dbo.stg_household_transactions ................ [[32mOK[0m in 0.64s]
+[0m17:18:37.700808 [debug] [Thread-1 (]: Finished running node model.household_income_dbt.stg_household_transactions
+[0m17:18:37.704095 [debug] [MainThread]: On master: COMMIT
+[0m17:18:37.706097 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:18:37.708096 [debug] [MainThread]: Connection 'list_dbt_household_data' was properly closed.
+[0m17:18:37.711336 [debug] [MainThread]: Connection 'list_dbt_household_data_dbo' was properly closed.
+[0m17:18:37.713328 [debug] [MainThread]: Connection 'model.household_income_dbt.stg_household_transactions' was properly closed.
+[0m17:18:37.715330 [info ] [MainThread]: 
+[0m17:18:37.719470 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.23 seconds (1.23s).
+[0m17:18:37.722485 [debug] [MainThread]: Command end result
+[0m17:18:37.825581 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\manifest.json
+[0m17:18:37.833692 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\semantic_manifest.json
+[0m17:18:37.850831 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\run_results.json
+[0m17:18:37.852393 [info ] [MainThread]: 
+[0m17:18:37.853957 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:18:37.857035 [info ] [MainThread]: 
+[0m17:18:37.860152 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m17:18:37.864865 [debug] [MainThread]: Command `dbt run` succeeded at 17:18:37.863286 after 12.63 seconds
+[0m17:18:37.868047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D99062C4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D989939010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D991957FD0>]}
+[0m17:18:37.870995 [debug] [MainThread]: Flushing usage events
+[0m17:18:39.137210 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:24:52.679400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125AA83FF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125A97ADE10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125A97ADC10>]}
+
+
+============================== 17:24:52.689707 | 3944dc61-a8ad-4ba2-ae3b-80da922cddba ==============================
+[0m17:24:52.689707 [info ] [MainThread]: Running with dbt=1.11.11
+[0m17:24:52.691963 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\dbt_project\\household_income_pipeline\\household_income_dbt\\logs'}
+[0m17:24:53.758501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3944dc61-a8ad-4ba2-ae3b-80da922cddba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125A952FB10>]}
+[0m17:24:53.903903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3944dc61-a8ad-4ba2-ae3b-80da922cddba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125A876C0D0>]}
+[0m17:24:53.905408 [info ] [MainThread]: Registered adapter: sqlserver=1.10.0
+[0m17:24:54.691271 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m17:24:54.693797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '3944dc61-a8ad-4ba2-ae3b-80da922cddba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125AAFD5690>]}
+[0m17:24:54.716653 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m17:24:55.367826 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m17:24:55.369831 [debug] [MainThread]: Partial parsing: updated file: household_income_dbt://models\staging\sources.yml
+[0m17:24:55.883331 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses dbt-core's standard schema concatenation (`target.schema` + `_` + `custom_schema_name`). When False (default), uses legacy adapter behaviour: `custom_schema_name` is used directly without prefixing `target.schema`. For a permanent solution, override the `sqlserver__generate_schema_name` macro in your project instead.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_default_schema_concat` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m17:24:55.884345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '3944dc61-a8ad-4ba2-ae3b-80da922cddba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125AB196410>]}
+[0m17:24:56.770729 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.household_income_dbt.marts
+[0m17:24:56.805993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3944dc61-a8ad-4ba2-ae3b-80da922cddba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125AB552FD0>]}
+[0m17:24:57.013790 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\manifest.json
+[0m17:24:57.020342 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\semantic_manifest.json
+[0m17:24:57.092782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3944dc61-a8ad-4ba2-ae3b-80da922cddba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125AB0277D0>]}
+[0m17:24:57.094813 [info ] [MainThread]: Found 1 model, 2 data tests, 1 source, 522 macros
+[0m17:24:57.095812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3944dc61-a8ad-4ba2-ae3b-80da922cddba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125AB26EB50>]}
+[0m17:24:57.100812 [info ] [MainThread]: 
+[0m17:24:57.104341 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:24:57.105340 [info ] [MainThread]: 
+[0m17:24:57.107879 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m17:24:57.113425 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_dbt_household_data'
+[0m17:24:57.181048 [debug] [ThreadPool]: dbt-sqlserver
+[0m17:24:57.183622 [debug] [ThreadPool]: Using sqlserver connection "list_dbt_household_data"
+[0m17:24:57.185601 [debug] [ThreadPool]: On list_dbt_household_data: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "connection_name": "list_dbt_household_data"} */
+USE [dbt_household_data];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m17:24:57.186613 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:24:57.188601 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m17:24:57.444770 [debug] [ThreadPool]: sqlserver adapter: Connected to db: dbt_household_data
+[0m17:24:57.463546 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:24:57.470098 [debug] [ThreadPool]: On list_dbt_household_data: Close
+[0m17:24:57.474640 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_dbt_household_data_dbo'
+[0m17:24:57.492899 [debug] [ThreadPool]: dbt-sqlserver
+[0m17:24:57.494914 [debug] [ThreadPool]: Using sqlserver connection "list_dbt_household_data_dbo"
+[0m17:24:57.496584 [debug] [ThreadPool]: On list_dbt_household_data_dbo: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "connection_name": "list_dbt_household_data_dbo"} */
+USE [dbt_household_data];
+    declare @schema_id int = schema_id('dbo');
+    select
+      DB_NAME() as [database],
+      t.name as [name],
+      'dbo' as [schema],
+      'table' as table_type
+    from sys.tables as t with (nolock)
+    where t.schema_id = @schema_id
+    union all
+    select
+      DB_NAME() as [database],
+      v.name as [name],
+      'dbo' as [schema],
+      'view' as table_type
+    from sys.views as v with (nolock)
+    where v.schema_id = @schema_id
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m17:24:57.497600 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:24:57.500073 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m17:24:57.502064 [debug] [ThreadPool]: sqlserver adapter: Connected to db: dbt_household_data
+[0m17:24:57.595961 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:24:57.600974 [debug] [ThreadPool]: On list_dbt_household_data_dbo: ROLLBACK
+[0m17:24:57.602967 [debug] [ThreadPool]: On list_dbt_household_data_dbo: Close
+[0m17:24:57.608777 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3944dc61-a8ad-4ba2-ae3b-80da922cddba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125A61929D0>]}
+[0m17:24:57.609774 [debug] [MainThread]: On master: COMMIT
+[0m17:24:57.626541 [debug] [Thread-1 (]: Began running node model.household_income_dbt.stg_household_transactions
+[0m17:24:57.628540 [info ] [Thread-1 (]: 1 of 1 START sql view model dbo.stg_household_transactions ..................... [RUN]
+[0m17:24:57.631556 [debug] [Thread-1 (]: Acquiring new sqlserver connection 'model.household_income_dbt.stg_household_transactions'
+[0m17:24:57.635096 [debug] [Thread-1 (]: Began compiling node model.household_income_dbt.stg_household_transactions
+[0m17:24:57.666406 [debug] [Thread-1 (]: Writing injected SQL for node "model.household_income_dbt.stg_household_transactions"
+[0m17:24:57.670396 [debug] [Thread-1 (]: Began executing node model.household_income_dbt.stg_household_transactions
+[0m17:24:57.811108 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m17:24:57.814494 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+
+    USE [dbt_household_data];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('stg_household_transactions'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('stg_household_transactions'), 'V') is not null
+
+  
+[0m17:24:57.817028 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:24:57.819024 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m17:24:57.822023 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: dbt_household_data
+[0m17:24:57.870213 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:24:57.892019 [debug] [Thread-1 (]: Writing runtime sql for node "model.household_income_dbt.stg_household_transactions"
+[0m17:24:57.896566 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m17:24:57.899574 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+declare @dbt_sqlserver_noop int;
+[0m17:24:57.903089 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:24:57.973302 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: COMMIT
+[0m17:24:57.995633 [debug] [Thread-1 (]: Applying DROP to: "dbt_household_data"."dbo"."stg_household_transactions__dbt_backup"
+[0m17:24:58.026840 [debug] [Thread-1 (]: dbt-sqlserver
+[0m17:24:58.028841 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m17:24:58.034376 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+
+        USE [dbt_household_data];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'dbt_household_data'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'stg_household_transactions__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m17:24:58.081580 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:24:58.089200 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m17:24:58.090203 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+
+      
+      
+    
+    USE [dbt_household_data];
+    EXEC('DROP view IF EXISTS "dbo"."stg_household_transactions__dbt_backup";');
+
+[0m17:24:58.092709 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m17:24:58.097921 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: ROLLBACK
+[0m17:24:58.099917 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: Close
+[0m17:24:58.104982 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3944dc61-a8ad-4ba2-ae3b-80da922cddba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125AB5FFC90>]}
+[0m17:24:58.107490 [info ] [Thread-1 (]: 1 of 1 OK created sql view model dbo.stg_household_transactions ................ [[32mOK[0m in 0.47s]
+[0m17:24:58.109539 [debug] [Thread-1 (]: Finished running node model.household_income_dbt.stg_household_transactions
+[0m17:24:58.113402 [debug] [MainThread]: On master: COMMIT
+[0m17:24:58.115421 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:24:58.116416 [debug] [MainThread]: Connection 'list_dbt_household_data' was properly closed.
+[0m17:24:58.118417 [debug] [MainThread]: Connection 'list_dbt_household_data_dbo' was properly closed.
+[0m17:24:58.120907 [debug] [MainThread]: Connection 'model.household_income_dbt.stg_household_transactions' was properly closed.
+[0m17:24:58.121905 [info ] [MainThread]: 
+[0m17:24:58.123904 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.01 seconds (1.01s).
+[0m17:24:58.126903 [debug] [MainThread]: Command end result
+[0m17:24:58.220853 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\manifest.json
+[0m17:24:58.227879 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\semantic_manifest.json
+[0m17:24:58.241405 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\run_results.json
+[0m17:24:58.242925 [info ] [MainThread]: 
+[0m17:24:58.245044 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:24:58.246244 [info ] [MainThread]: 
+[0m17:24:58.249252 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m17:24:58.253777 [debug] [MainThread]: Command `dbt run` succeeded at 17:24:58.252759 after 5.92 seconds
+[0m17:24:58.255782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125A96DCE50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125A2819010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000125A96FFD50>]}
+[0m17:24:58.257776 [debug] [MainThread]: Flushing usage events
+[0m17:24:59.538668 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:25:12.863096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9FCC5FF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9FCCF4FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9FCCF5F10>]}
+
+
+============================== 17:25:12.881543 | bd128e1a-6022-49df-b75b-25f415771e9a ==============================
+[0m17:25:12.881543 [info ] [MainThread]: Running with dbt=1.11.11
+[0m17:25:12.886657 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt test', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\dbt_project\\household_income_pipeline\\household_income_dbt\\logs'}
+[0m17:25:13.831596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bd128e1a-6022-49df-b75b-25f415771e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9FD0C5290>]}
+[0m17:25:14.043251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bd128e1a-6022-49df-b75b-25f415771e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9FAC50090>]}
+[0m17:25:14.045394 [info ] [MainThread]: Registered adapter: sqlserver=1.10.0
+[0m17:25:14.977964 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m17:25:14.979969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'bd128e1a-6022-49df-b75b-25f415771e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9FD1F0110>]}
+[0m17:25:15.000129 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m17:25:15.451716 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:25:15.454247 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m17:25:15.455244 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:25:15.470429 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.household_income_dbt.marts
+[0m17:25:15.578631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bd128e1a-6022-49df-b75b-25f415771e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9FD6B5190>]}
+[0m17:25:15.822391 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\manifest.json
+[0m17:25:15.829625 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\semantic_manifest.json
+[0m17:25:15.945315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bd128e1a-6022-49df-b75b-25f415771e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9FD7FE610>]}
+[0m17:25:15.946840 [info ] [MainThread]: Found 1 model, 2 data tests, 1 source, 522 macros
+[0m17:25:15.951359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bd128e1a-6022-49df-b75b-25f415771e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9FD4DDD90>]}
+[0m17:25:15.957679 [info ] [MainThread]: 
+[0m17:25:15.959687 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:25:15.961741 [info ] [MainThread]: 
+[0m17:25:15.968022 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m17:25:15.974969 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_dbt_household_data_dbo'
+[0m17:25:16.056953 [debug] [ThreadPool]: dbt-sqlserver
+[0m17:25:16.058969 [debug] [ThreadPool]: Using sqlserver connection "list_dbt_household_data_dbo"
+[0m17:25:16.060957 [debug] [ThreadPool]: On list_dbt_household_data_dbo: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "connection_name": "list_dbt_household_data_dbo"} */
+USE [dbt_household_data];
+    declare @schema_id int = schema_id('dbo');
+    select
+      DB_NAME() as [database],
+      t.name as [name],
+      'dbo' as [schema],
+      'table' as table_type
+    from sys.tables as t with (nolock)
+    where t.schema_id = @schema_id
+    union all
+    select
+      DB_NAME() as [database],
+      v.name as [name],
+      'dbo' as [schema],
+      'view' as table_type
+    from sys.views as v with (nolock)
+    where v.schema_id = @schema_id
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m17:25:16.061954 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:25:16.064488 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m17:25:16.356598 [debug] [ThreadPool]: sqlserver adapter: Connected to db: dbt_household_data
+[0m17:25:16.447307 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:25:16.453060 [debug] [ThreadPool]: On list_dbt_household_data_dbo: ROLLBACK
+[0m17:25:16.454391 [debug] [ThreadPool]: On list_dbt_household_data_dbo: Close
+[0m17:25:16.457008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bd128e1a-6022-49df-b75b-25f415771e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9FD6B4990>]}
+[0m17:25:16.458016 [debug] [MainThread]: On master: COMMIT
+[0m17:25:16.469093 [debug] [Thread-1 (]: Began running node test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce
+[0m17:25:16.470532 [debug] [Thread-2 (]: Began running node test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a
+[0m17:25:16.471538 [info ] [Thread-1 (]: 1 of 2 START test source_not_null_household_data_household_transactions_hh_ids . [RUN]
+[0m17:25:16.473058 [info ] [Thread-2 (]: 2 of 2 START test source_not_null_household_data_household_transactions_trx_date  [RUN]
+[0m17:25:16.475058 [debug] [Thread-1 (]: Acquiring new sqlserver connection 'test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce'
+[0m17:25:16.476058 [debug] [Thread-2 (]: Acquiring new sqlserver connection 'test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a'
+[0m17:25:16.477058 [debug] [Thread-1 (]: Began compiling node test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce
+[0m17:25:16.478059 [debug] [Thread-2 (]: Began compiling node test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a
+[0m17:25:16.514227 [debug] [Thread-1 (]: Writing injected SQL for node "test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce"
+[0m17:25:16.524168 [debug] [Thread-2 (]: Writing injected SQL for node "test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a"
+[0m17:25:16.528168 [debug] [Thread-1 (]: Began executing node test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce
+[0m17:25:16.529486 [debug] [Thread-2 (]: Began executing node test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a
+[0m17:25:16.580444 [debug] [Thread-1 (]: Writing runtime sql for node "test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce"
+[0m17:25:16.590981 [debug] [Thread-2 (]: Writing runtime sql for node "test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a"
+[0m17:25:16.594326 [debug] [Thread-1 (]: Using sqlserver connection "test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce"
+[0m17:25:16.595640 [debug] [Thread-2 (]: Using sqlserver connection "test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a"
+[0m17:25:16.597130 [debug] [Thread-1 (]: On test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce"} */
+
+    
+    -- Create target schema if it does not
+  USE [dbt_household_data];
+  IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo')
+  BEGIN
+    EXEC('CREATE SCHEMA [dbo]')
+  END
+
+  
+
+  
+  EXEC('create view 
+    [dbo].[testview_1fb327a8e7fb6aa270165f81fc3c992e_5269]
+   as 
+    
+    
+    
+
+
+
+select hh_ids
+from "dbt_household_data"."dbo"."household_transactions"
+where hh_ids is null
+
+
+
+  ;')
+  select
+    
+    count(*) as failures,
+    case when count(*) != 0
+      then 'true' else 'false' end as should_warn,
+    case when count(*) != 0
+      then 'true' else 'false' end as should_error
+  from (
+    select * from 
+    [dbo].[testview_1fb327a8e7fb6aa270165f81fc3c992e_5269]
+  
+  ) dbt_internal_test;
+
+  EXEC('drop view 
+    [dbo].[testview_1fb327a8e7fb6aa270165f81fc3c992e_5269]
+  ;')
+[0m17:25:16.599119 [debug] [Thread-2 (]: On test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a"} */
+
+    
+    -- Create target schema if it does not
+  USE [dbt_household_data];
+  IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo')
+  BEGIN
+    EXEC('CREATE SCHEMA [dbo]')
+  END
+
+  
+
+  
+  EXEC('create view 
+    [dbo].[testview_03b9c5a12360e04045d08b8ca6c0c808_13173]
+   as 
+    
+    
+    
+
+
+
+select trx_date
+from "dbt_household_data"."dbo"."household_transactions"
+where trx_date is null
+
+
+
+  ;')
+  select
+    
+    count(*) as failures,
+    case when count(*) != 0
+      then 'true' else 'false' end as should_warn,
+    case when count(*) != 0
+      then 'true' else 'false' end as should_error
+  from (
+    select * from 
+    [dbo].[testview_03b9c5a12360e04045d08b8ca6c0c808_13173]
+  
+  ) dbt_internal_test;
+
+  EXEC('drop view 
+    [dbo].[testview_03b9c5a12360e04045d08b8ca6c0c808_13173]
+  ;')
+[0m17:25:16.600118 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:25:16.602110 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:25:16.603109 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m17:25:16.604119 [debug] [Thread-2 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m17:25:16.607120 [debug] [Thread-2 (]: sqlserver adapter: Connected to db: dbt_household_data
+[0m17:25:16.653180 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: dbt_household_data
+[0m17:25:19.113070 [debug] [Thread-2 (]: SQL status: OK in 3.000 seconds
+[0m17:25:19.130611 [debug] [Thread-2 (]: On test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a: ROLLBACK
+[0m17:25:19.133147 [debug] [Thread-2 (]: On test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a: Close
+[0m17:25:19.136168 [info ] [Thread-2 (]: 2 of 2 PASS source_not_null_household_data_household_transactions_trx_date ..... [[32mPASS[0m in 2.66s]
+[0m17:25:19.140585 [debug] [Thread-2 (]: Finished running node test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a
+[0m17:25:19.183110 [debug] [Thread-1 (]: SQL status: OK in 3.000 seconds
+[0m17:25:19.188136 [debug] [Thread-1 (]: On test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce: ROLLBACK
+[0m17:25:19.190147 [debug] [Thread-1 (]: On test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce: Close
+[0m17:25:19.192183 [info ] [Thread-1 (]: 1 of 2 PASS source_not_null_household_data_household_transactions_hh_ids ....... [[32mPASS[0m in 2.72s]
+[0m17:25:19.194184 [debug] [Thread-1 (]: Finished running node test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce
+[0m17:25:19.199045 [debug] [MainThread]: On master: COMMIT
+[0m17:25:19.203194 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:25:19.205121 [debug] [MainThread]: Connection 'list_dbt_household_data_dbo' was properly closed.
+[0m17:25:19.207135 [debug] [MainThread]: Connection 'test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce' was properly closed.
+[0m17:25:19.210545 [debug] [MainThread]: Connection 'test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a' was properly closed.
+[0m17:25:19.213074 [info ] [MainThread]: 
+[0m17:25:19.216622 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 3.25 seconds (3.25s).
+[0m17:25:19.220814 [debug] [MainThread]: Command end result
+[0m17:25:19.338082 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\manifest.json
+[0m17:25:19.347687 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\semantic_manifest.json
+[0m17:25:19.367157 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\run_results.json
+[0m17:25:19.369157 [info ] [MainThread]: 
+[0m17:25:19.372159 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:25:19.374779 [info ] [MainThread]: 
+[0m17:25:19.377205 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m17:25:19.383259 [debug] [MainThread]: Command `dbt test` succeeded at 17:25:19.381724 after 6.88 seconds
+[0m17:25:19.387180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9FCCF5B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9F4D29010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9FBBC7A50>]}
+[0m17:25:19.390541 [debug] [MainThread]: Flushing usage events
+[0m17:25:20.622437 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:19:45.848794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CE2CD190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CE2CFF10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CE2CFFD0>]}
+
+
+============================== 22:19:45.861321 | 4b4c2343-23c5-44bf-8bc1-814ab1fcad82 ==============================
+[0m22:19:45.861321 [info ] [MainThread]: Running with dbt=1.11.11
+[0m22:19:45.863316 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\dbt_project\\household_income_pipeline\\household_income_dbt\\logs'}
+[0m22:19:51.224293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4b4c2343-23c5-44bf-8bc1-814ab1fcad82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CE86B410>]}
+[0m22:19:51.339453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4b4c2343-23c5-44bf-8bc1-814ab1fcad82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CC2B4050>]}
+[0m22:19:51.341453 [info ] [MainThread]: Registered adapter: sqlserver=1.10.0
+[0m22:19:52.343331 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m22:19:52.345297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '4b4c2343-23c5-44bf-8bc1-814ab1fcad82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CEB0A650>]}
+[0m22:19:52.407086 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m22:19:54.736993 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m22:19:54.737994 [debug] [MainThread]: Partial parsing: added file: household_income_dbt://models\marts\mart_household_monthly_cashflow.sql
+[0m22:19:55.105080 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses dbt-core's standard schema concatenation (`target.schema` + `_` + `custom_schema_name`). When False (default), uses legacy adapter behaviour: `custom_schema_name` is used directly without prefixing `target.schema`. For a permanent solution, override the `sqlserver__generate_schema_name` macro in your project instead.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_default_schema_concat` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m22:19:55.107079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '4b4c2343-23c5-44bf-8bc1-814ab1fcad82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CECE5FD0>]}
+[0m22:19:55.328616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4b4c2343-23c5-44bf-8bc1-814ab1fcad82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4C9D50D10>]}
+[0m22:19:55.573367 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\manifest.json
+[0m22:19:55.598896 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\semantic_manifest.json
+[0m22:19:55.651614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b4c2343-23c5-44bf-8bc1-814ab1fcad82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4C9D2DDD0>]}
+[0m22:19:55.654153 [info ] [MainThread]: Found 2 models, 2 data tests, 1 source, 522 macros
+[0m22:19:55.656151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b4c2343-23c5-44bf-8bc1-814ab1fcad82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CEF81610>]}
+[0m22:19:55.660154 [info ] [MainThread]: 
+[0m22:19:55.661151 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:19:55.664675 [info ] [MainThread]: 
+[0m22:19:55.665675 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m22:19:55.681222 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_dbt_household_data'
+[0m22:19:55.745827 [debug] [ThreadPool]: dbt-sqlserver
+[0m22:19:55.746827 [debug] [ThreadPool]: Using sqlserver connection "list_dbt_household_data"
+[0m22:19:55.747828 [debug] [ThreadPool]: On list_dbt_household_data: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "connection_name": "list_dbt_household_data"} */
+USE [dbt_household_data];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m22:19:55.748830 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:19:55.749828 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m22:19:55.937445 [debug] [ThreadPool]: sqlserver adapter: Connected to db: dbt_household_data
+[0m22:19:55.946444 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:19:55.949443 [debug] [ThreadPool]: On list_dbt_household_data: Close
+[0m22:19:55.954451 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_dbt_household_data_dbo'
+[0m22:19:55.966771 [debug] [ThreadPool]: dbt-sqlserver
+[0m22:19:55.969776 [debug] [ThreadPool]: Using sqlserver connection "list_dbt_household_data_dbo"
+[0m22:19:55.969776 [debug] [ThreadPool]: On list_dbt_household_data_dbo: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "connection_name": "list_dbt_household_data_dbo"} */
+USE [dbt_household_data];
+    declare @schema_id int = schema_id('dbo');
+    select
+      DB_NAME() as [database],
+      t.name as [name],
+      'dbo' as [schema],
+      'table' as table_type
+    from sys.tables as t with (nolock)
+    where t.schema_id = @schema_id
+    union all
+    select
+      DB_NAME() as [database],
+      v.name as [name],
+      'dbo' as [schema],
+      'view' as table_type
+    from sys.views as v with (nolock)
+    where v.schema_id = @schema_id
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m22:19:55.971287 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:19:55.972295 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m22:19:55.973294 [debug] [ThreadPool]: sqlserver adapter: Connected to db: dbt_household_data
+[0m22:19:56.040387 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:19:56.045408 [debug] [ThreadPool]: On list_dbt_household_data_dbo: ROLLBACK
+[0m22:19:56.046388 [debug] [ThreadPool]: On list_dbt_household_data_dbo: Close
+[0m22:19:56.049425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b4c2343-23c5-44bf-8bc1-814ab1fcad82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CEE6AC50>]}
+[0m22:19:56.052393 [debug] [MainThread]: On master: COMMIT
+[0m22:19:56.064387 [debug] [Thread-1 (]: Began running node model.household_income_dbt.stg_household_transactions
+[0m22:19:56.065388 [info ] [Thread-1 (]: 1 of 2 START sql view model dbo.stg_household_transactions ..................... [RUN]
+[0m22:19:56.067390 [debug] [Thread-1 (]: Acquiring new sqlserver connection 'model.household_income_dbt.stg_household_transactions'
+[0m22:19:56.068395 [debug] [Thread-1 (]: Began compiling node model.household_income_dbt.stg_household_transactions
+[0m22:19:56.082934 [debug] [Thread-1 (]: Writing injected SQL for node "model.household_income_dbt.stg_household_transactions"
+[0m22:19:56.086945 [debug] [Thread-1 (]: Began executing node model.household_income_dbt.stg_household_transactions
+[0m22:19:56.160977 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m22:19:56.161987 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+
+    USE [dbt_household_data];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('stg_household_transactions'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('stg_household_transactions'), 'V') is not null
+
+  
+[0m22:19:56.163021 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:19:56.165182 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m22:19:56.167181 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: dbt_household_data
+[0m22:19:56.174221 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:19:56.188270 [debug] [Thread-1 (]: Writing runtime sql for node "model.household_income_dbt.stg_household_transactions"
+[0m22:19:56.192265 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m22:19:56.193268 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+declare @dbt_sqlserver_noop int;
+[0m22:19:56.194792 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:19:56.230330 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: COMMIT
+[0m22:19:56.242900 [debug] [Thread-1 (]: Applying DROP to: "dbt_household_data"."dbo"."stg_household_transactions__dbt_backup"
+[0m22:19:56.259908 [debug] [Thread-1 (]: dbt-sqlserver
+[0m22:19:56.262461 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m22:19:56.265501 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+
+        USE [dbt_household_data];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'dbt_household_data'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'stg_household_transactions__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m22:19:56.302164 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:19:56.307159 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m22:19:56.309157 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+
+      
+      
+    
+    USE [dbt_household_data];
+    EXEC('DROP view IF EXISTS "dbo"."stg_household_transactions__dbt_backup";');
+
+[0m22:19:56.311194 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:19:56.316439 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: ROLLBACK
+[0m22:19:56.317436 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: Close
+[0m22:19:56.323482 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b4c2343-23c5-44bf-8bc1-814ab1fcad82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CF03D210>]}
+[0m22:19:56.325526 [info ] [Thread-1 (]: 1 of 2 OK created sql view model dbo.stg_household_transactions ................ [[32mOK[0m in 0.25s]
+[0m22:19:56.327492 [debug] [Thread-1 (]: Finished running node model.household_income_dbt.stg_household_transactions
+[0m22:19:56.328493 [debug] [Thread-3 (]: Began running node model.household_income_dbt.mart_household_monthly_cashflow
+[0m22:19:56.330492 [info ] [Thread-3 (]: 2 of 2 START sql table model dbo.mart_household_monthly_cashflow ............... [RUN]
+[0m22:19:56.332503 [debug] [Thread-3 (]: Acquiring new sqlserver connection 'model.household_income_dbt.mart_household_monthly_cashflow'
+[0m22:19:56.333507 [debug] [Thread-3 (]: Began compiling node model.household_income_dbt.mart_household_monthly_cashflow
+[0m22:19:56.345044 [debug] [Thread-3 (]: Writing injected SQL for node "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m22:19:56.349042 [debug] [Thread-3 (]: Began executing node model.household_income_dbt.mart_household_monthly_cashflow
+[0m22:19:56.411264 [debug] [Thread-3 (]: dbt-sqlserver
+[0m22:19:56.420282 [debug] [Thread-3 (]: Applying DROP to: "dbt_household_data"."dbo"."mart_household_monthly_cashflow__dbt_tmp__dbt_tmp_vw"
+[0m22:19:56.422277 [debug] [Thread-3 (]: dbt-sqlserver
+[0m22:19:56.424274 [debug] [Thread-3 (]: Using sqlserver connection "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m22:19:56.425274 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.mart_household_monthly_cashflow"} */
+
+        USE [dbt_household_data];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'dbt_household_data'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'mart_household_monthly_cashflow__dbt_tmp__dbt_tmp_vw'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m22:19:56.427278 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:19:56.428276 [debug] [Thread-3 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m22:19:56.429275 [debug] [Thread-3 (]: sqlserver adapter: Connected to db: dbt_household_data
+[0m22:19:56.458219 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m22:19:56.462228 [debug] [Thread-3 (]: Using sqlserver connection "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m22:19:56.463228 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.mart_household_monthly_cashflow"} */
+
+      
+      
+    
+    USE [dbt_household_data];
+    EXEC('DROP view IF EXISTS "dbo"."mart_household_monthly_cashflow__dbt_tmp__dbt_tmp_vw";');
+
+[0m22:19:56.466227 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m22:19:56.494815 [debug] [Thread-3 (]: Writing runtime sql for node "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m22:19:56.497821 [debug] [Thread-3 (]: Using sqlserver connection "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m22:19:56.499818 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.mart_household_monthly_cashflow"} */
+
+  
+    USE [dbt_household_data];
+    USE [dbt_household_data];
+    
+    
+
+    
+
+    
+    USE [dbt_household_data];
+    EXEC('
+        CREATE OR ALTER VIEW "dbo"."mart_household_monthly_cashflow__dbt_tmp__dbt_tmp_vw" AS SELECT
+    hh_ids,
+
+    DATEFROMPARTS(
+        YEAR(trx_date),
+        MONTH(trx_date),
+        1
+    ) AS month_start,
+
+    SUM(
+        CASE
+            WHEN trx_direction = ''Inflow''
+            THEN trx_value_kes
+            ELSE 0
+        END
+    ) AS total_inflows_kes,
+
+    SUM(
+        CASE
+            WHEN trx_direction = ''Outflow''
+            THEN trx_value_kes
+            ELSE 0
+        END
+    ) AS total_outflows_kes,
+
+    SUM(
+        CASE
+            WHEN trx_direction IS NULL
+            THEN trx_value_kes
+            ELSE 0
+        END
+    ) AS unknown_direction_amount_kes,
+
+    COUNT(*) AS transaction_count
+
+FROM "dbt_household_data"."dbo"."stg_household_transactions"
+
+GROUP BY
+    hh_ids,
+    DATEFROMPARTS(
+        YEAR(trx_date),
+        MONTH(trx_date),
+        1
+    );
+    ')
+
+EXEC('
+            SELECT * INTO "dbt_household_data"."dbo"."mart_household_monthly_cashflow__dbt_tmp" FROM "dbt_household_data"."dbo"."mart_household_monthly_cashflow__dbt_tmp__dbt_tmp_vw" 
+    OPTION (LABEL = ''dbt-sqlserver'');
+
+        ')
+
+    
+    EXEC('DROP VIEW IF EXISTS "dbo"."mart_household_monthly_cashflow__dbt_tmp__dbt_tmp_vw"')
+
+
+
+    
+    use [dbt_household_data];
+    if EXISTS (
+        SELECT *
+        FROM sys.indexes with (nolock)
+        WHERE name = 'dbo_mart_household_monthly_cashflow__dbt_tmp_cci'
+        AND object_id=object_id('dbo_mart_household_monthly_cashflow__dbt_tmp')
+    )
+    DROP index "dbo"."mart_household_monthly_cashflow__dbt_tmp".dbo_mart_household_monthly_cashflow__dbt_tmp_cci
+    CREATE CLUSTERED COLUMNSTORE INDEX dbo_mart_household_monthly_cashflow__dbt_tmp_cci
+    ON "dbo"."mart_household_monthly_cashflow__dbt_tmp"
+
+   
+
+
+  
+[0m22:20:02.873652 [debug] [Thread-3 (]: SQL status: OK in 6.000 seconds
+[0m22:20:02.893226 [debug] [Thread-3 (]: Using sqlserver connection "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m22:20:02.895227 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.mart_household_monthly_cashflow"} */
+USE [dbt_household_data];
+      EXEC sp_rename 'dbo.mart_household_monthly_cashflow__dbt_tmp', 'mart_household_monthly_cashflow'
+[0m22:20:03.457304 [debug] [Thread-3 (]: SQL status: OK in 1.000 seconds
+[0m22:20:03.468312 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: COMMIT
+[0m22:20:03.474828 [debug] [Thread-3 (]: Applying DROP to: "dbt_household_data"."dbo"."mart_household_monthly_cashflow__dbt_backup"
+[0m22:20:03.476829 [debug] [Thread-3 (]: Using sqlserver connection "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m22:20:03.478835 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.mart_household_monthly_cashflow"} */
+
+      
+    USE [dbt_household_data];
+    EXEC('DROP table IF EXISTS "dbo"."mart_household_monthly_cashflow__dbt_backup";');
+
+[0m22:20:03.481376 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m22:20:03.484899 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: Close
+[0m22:20:03.486899 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b4c2343-23c5-44bf-8bc1-814ab1fcad82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CF070B50>]}
+[0m22:20:03.488896 [info ] [Thread-3 (]: 2 of 2 OK created sql table model dbo.mart_household_monthly_cashflow .......... [[32mOK[0m in 7.16s]
+[0m22:20:03.489896 [debug] [Thread-3 (]: Finished running node model.household_income_dbt.mart_household_monthly_cashflow
+[0m22:20:03.493419 [debug] [MainThread]: On master: COMMIT
+[0m22:20:03.495420 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:20:03.495420 [debug] [MainThread]: Connection 'list_dbt_household_data' was properly closed.
+[0m22:20:03.496929 [debug] [MainThread]: Connection 'list_dbt_household_data_dbo' was properly closed.
+[0m22:20:03.497939 [debug] [MainThread]: Connection 'model.household_income_dbt.stg_household_transactions' was properly closed.
+[0m22:20:03.498939 [debug] [MainThread]: Connection 'model.household_income_dbt.mart_household_monthly_cashflow' was properly closed.
+[0m22:20:03.499939 [info ] [MainThread]: 
+[0m22:20:03.501497 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 7.83 seconds (7.83s).
+[0m22:20:03.505511 [debug] [MainThread]: Command end result
+[0m22:20:03.583216 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\manifest.json
+[0m22:20:03.592685 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\semantic_manifest.json
+[0m22:20:03.613284 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\run_results.json
+[0m22:20:03.615286 [info ] [MainThread]: 
+[0m22:20:03.618286 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:20:03.622499 [info ] [MainThread]: 
+[0m22:20:03.625501 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m22:20:03.628503 [debug] [MainThread]: Command `dbt run` succeeded at 22:20:03.627498 after 18.02 seconds
+[0m22:20:03.629503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4C6359010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CE3B1C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4C6648110>]}
+[0m22:20:03.630498 [debug] [MainThread]: Flushing usage events
+[0m22:20:04.954969 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:25:46.881485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000244D0D8EA90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000244D0D8DF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000244D0D8E610>]}
+
+
+============================== 08:25:46.888806 | 47156604-6000-43f5-9cd7-599f1e655754 ==============================
+[0m08:25:46.888806 [info ] [MainThread]: Running with dbt=1.11.11
+[0m08:25:46.888806 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\dbt_project\\household_income_pipeline\\household_income_dbt\\logs'}
+[0m08:25:46.936171 [info ] [MainThread]: dbt version: 1.11.11
+[0m08:25:46.936171 [info ] [MainThread]: python version: 3.11.2
+[0m08:25:46.936171 [info ] [MainThread]: python path: C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\python.exe
+[0m08:25:46.951826 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m08:25:47.229353 [info ] [MainThread]: Using profiles dir at C:\Users\ADMIN\.dbt
+[0m08:25:47.229353 [info ] [MainThread]: Using profiles.yml file at C:\Users\ADMIN\.dbt\profiles.yml
+[0m08:25:47.229353 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\dbt_project.yml
+[0m08:25:47.238238 [info ] [MainThread]: adapter type: sqlserver
+[0m08:25:47.238238 [info ] [MainThread]: adapter version: 1.10.0
+[0m08:25:47.413000 [info ] [MainThread]: Configuration:
+[0m08:25:47.413000 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m08:25:47.413000 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m08:25:47.413000 [info ] [MainThread]: Required dependencies:
+[0m08:25:47.413000 [debug] [MainThread]: Executing "git --help"
+[0m08:25:48.033695 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m08:25:48.033695 [debug] [MainThread]: STDERR: "b''"
+[0m08:25:48.049437 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m08:25:48.049437 [info ] [MainThread]: Connection:
+[0m08:25:48.049437 [info ] [MainThread]:   server: CYNIE\SQLEXPRESS
+[0m08:25:48.049437 [info ] [MainThread]:   port: 1433
+[0m08:25:48.049437 [info ] [MainThread]:   database: dbt_household_data
+[0m08:25:48.049437 [info ] [MainThread]:   schema: dbo
+[0m08:25:48.049437 [info ] [MainThread]:   UID: None
+[0m08:25:48.049437 [info ] [MainThread]:   authentication: Windows Login
+[0m08:25:48.049437 [info ] [MainThread]:   retries: 3
+[0m08:25:48.049437 [info ] [MainThread]:   login_timeout: 0
+[0m08:25:48.049437 [info ] [MainThread]:   query_timeout: 0
+[0m08:25:48.049437 [info ] [MainThread]:   trace_flag: False
+[0m08:25:48.049437 [info ] [MainThread]:   encrypt: True
+[0m08:25:48.065391 [info ] [MainThread]:   trust_cert: True
+[0m08:25:48.065391 [info ] [MainThread]: Registered adapter: sqlserver=1.10.0
+[0m08:25:48.924714 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m08:25:48.924714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '47156604-6000-43f5-9cd7-599f1e655754', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000244D150CD90>]}
+[0m08:25:48.924714 [debug] [MainThread]: Acquiring new sqlserver connection 'debug'
+[0m08:25:48.924714 [debug] [MainThread]: Using sqlserver connection "debug"
+[0m08:25:48.924714 [debug] [MainThread]: On debug: select 1 as id
+[0m08:25:48.924714 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:25:48.924714 [debug] [MainThread]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m08:25:49.131035 [debug] [MainThread]: sqlserver adapter: Connected to db: dbt_household_data
+[0m08:25:49.131035 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:25:49.131035 [debug] [MainThread]: On debug: Close
+[0m08:25:49.131035 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m08:25:49.131035 [info ] [MainThread]: [32mAll checks passed![0m
+[0m08:25:49.143515 [debug] [MainThread]: Command `dbt debug` succeeded at 08:25:49.143515 after 2.44 seconds
+[0m08:25:49.145527 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m08:25:49.145527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000244CFD0C210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000244CFCF7890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000244C8DC8C10>]}
+[0m08:25:49.147046 [debug] [MainThread]: Flushing usage events
+[0m08:25:50.272389 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:05:47.998825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257FF608990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257FF2A5CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257FF545C90>]}
+
+
+============================== 18:05:48.015503 | d0a92a53-7c72-4705-9bf6-0b2886ae33a8 ==============================
+[0m18:05:48.015503 [info ] [MainThread]: Running with dbt=1.11.11
+[0m18:05:48.015503 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'invocation_command': 'dbt run', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\dbt_project\\household_income_pipeline\\household_income_dbt\\logs'}
+[0m18:05:48.864704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd0a92a53-7c72-4705-9bf6-0b2886ae33a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257FBF57990>]}
+[0m18:05:48.979399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd0a92a53-7c72-4705-9bf6-0b2886ae33a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257FE5CC1D0>]}
+[0m18:05:48.981128 [info ] [MainThread]: Registered adapter: sqlserver=1.10.0
+[0m18:05:49.880234 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m18:05:49.880234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'd0a92a53-7c72-4705-9bf6-0b2886ae33a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257FF6CFA90>]}
+[0m18:05:49.913526 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m18:05:52.061642 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:05:52.061642 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:05:52.061642 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:05:52.165203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd0a92a53-7c72-4705-9bf6-0b2886ae33a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257810C9410>]}
+[0m18:05:52.344653 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\manifest.json
+[0m18:05:52.367743 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\semantic_manifest.json
+[0m18:05:52.415549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd0a92a53-7c72-4705-9bf6-0b2886ae33a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257FFC22A50>]}
+[0m18:05:52.415549 [info ] [MainThread]: Found 2 models, 2 data tests, 1 source, 522 macros
+[0m18:05:52.415549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd0a92a53-7c72-4705-9bf6-0b2886ae33a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257811AFDD0>]}
+[0m18:05:52.422872 [info ] [MainThread]: 
+[0m18:05:52.422872 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:05:52.422872 [info ] [MainThread]: 
+[0m18:05:52.426530 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m18:05:52.436932 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_dbt_household_data'
+[0m18:05:52.487416 [debug] [ThreadPool]: dbt-sqlserver
+[0m18:05:52.489228 [debug] [ThreadPool]: Using sqlserver connection "list_dbt_household_data"
+[0m18:05:52.490241 [debug] [ThreadPool]: On list_dbt_household_data: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "connection_name": "list_dbt_household_data"} */
+USE [dbt_household_data];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m18:05:52.490241 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:05:52.490241 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m18:05:52.649896 [debug] [ThreadPool]: sqlserver adapter: Connected to db: dbt_household_data
+[0m18:05:52.671190 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:05:52.671190 [debug] [ThreadPool]: On list_dbt_household_data: Close
+[0m18:05:52.681061 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_dbt_household_data_dbo'
+[0m18:05:52.694708 [debug] [ThreadPool]: dbt-sqlserver
+[0m18:05:52.695709 [debug] [ThreadPool]: Using sqlserver connection "list_dbt_household_data_dbo"
+[0m18:05:52.696708 [debug] [ThreadPool]: On list_dbt_household_data_dbo: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "connection_name": "list_dbt_household_data_dbo"} */
+USE [dbt_household_data];
+    declare @schema_id int = schema_id('dbo');
+    select
+      DB_NAME() as [database],
+      t.name as [name],
+      'dbo' as [schema],
+      'table' as table_type
+    from sys.tables as t with (nolock)
+    where t.schema_id = @schema_id
+    union all
+    select
+      DB_NAME() as [database],
+      v.name as [name],
+      'dbo' as [schema],
+      'view' as table_type
+    from sys.views as v with (nolock)
+    where v.schema_id = @schema_id
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m18:05:52.697707 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:05:52.698708 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m18:05:52.699707 [debug] [ThreadPool]: sqlserver adapter: Connected to db: dbt_household_data
+[0m18:05:52.742187 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:05:52.744708 [debug] [ThreadPool]: On list_dbt_household_data_dbo: ROLLBACK
+[0m18:05:52.745675 [debug] [ThreadPool]: On list_dbt_household_data_dbo: Close
+[0m18:05:52.747707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd0a92a53-7c72-4705-9bf6-0b2886ae33a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257FFEE2910>]}
+[0m18:05:52.748679 [debug] [MainThread]: On master: COMMIT
+[0m18:05:52.760240 [debug] [Thread-1 (]: Began running node model.household_income_dbt.stg_household_transactions
+[0m18:05:52.762282 [info ] [Thread-1 (]: 1 of 2 START sql view model dbo.stg_household_transactions ..................... [RUN]
+[0m18:05:52.763249 [debug] [Thread-1 (]: Acquiring new sqlserver connection 'model.household_income_dbt.stg_household_transactions'
+[0m18:05:52.764283 [debug] [Thread-1 (]: Began compiling node model.household_income_dbt.stg_household_transactions
+[0m18:05:52.776935 [debug] [Thread-1 (]: Writing injected SQL for node "model.household_income_dbt.stg_household_transactions"
+[0m18:05:52.780950 [debug] [Thread-1 (]: Began executing node model.household_income_dbt.stg_household_transactions
+[0m18:05:52.900548 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m18:05:52.902555 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+
+    USE [dbt_household_data];
+  select object_definition(object_id(quotename('dbo') + '.' + quotename('stg_household_transactions'), 'V')) as definition
+  where object_id(quotename('dbo') + '.' + quotename('stg_household_transactions'), 'V') is not null
+
+  
+[0m18:05:52.903552 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:05:52.905552 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m18:05:52.912167 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: dbt_household_data
+[0m18:05:52.919669 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:05:52.936104 [debug] [Thread-1 (]: Writing runtime sql for node "model.household_income_dbt.stg_household_transactions"
+[0m18:05:52.936104 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m18:05:52.944381 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+declare @dbt_sqlserver_noop int;
+[0m18:05:52.947430 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:05:52.988698 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: COMMIT
+[0m18:05:52.998492 [debug] [Thread-1 (]: Applying DROP to: "dbt_household_data"."dbo"."stg_household_transactions__dbt_backup"
+[0m18:05:53.017080 [debug] [Thread-1 (]: dbt-sqlserver
+[0m18:05:53.020081 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m18:05:53.023084 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+
+        USE [dbt_household_data];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'dbt_household_data'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'stg_household_transactions__dbt_backup'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m18:05:53.058928 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:05:53.063036 [debug] [Thread-1 (]: Using sqlserver connection "model.household_income_dbt.stg_household_transactions"
+[0m18:05:53.065034 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.stg_household_transactions"} */
+
+      
+      
+    
+    USE [dbt_household_data];
+    EXEC('DROP view IF EXISTS "dbo"."stg_household_transactions__dbt_backup";');
+
+[0m18:05:53.069033 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:05:53.074033 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: ROLLBACK
+[0m18:05:53.074033 [debug] [Thread-1 (]: On model.household_income_dbt.stg_household_transactions: Close
+[0m18:05:53.085289 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a92a53-7c72-4705-9bf6-0b2886ae33a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257FFE84A90>]}
+[0m18:05:53.088288 [info ] [Thread-1 (]: 1 of 2 OK created sql view model dbo.stg_household_transactions ................ [[32mOK[0m in 0.32s]
+[0m18:05:53.091295 [debug] [Thread-1 (]: Finished running node model.household_income_dbt.stg_household_transactions
+[0m18:05:53.093644 [debug] [Thread-3 (]: Began running node model.household_income_dbt.mart_household_monthly_cashflow
+[0m18:05:53.095745 [info ] [Thread-3 (]: 2 of 2 START sql table model dbo.mart_household_monthly_cashflow ............... [RUN]
+[0m18:05:53.099379 [debug] [Thread-3 (]: Acquiring new sqlserver connection 'model.household_income_dbt.mart_household_monthly_cashflow'
+[0m18:05:53.103419 [debug] [Thread-3 (]: Began compiling node model.household_income_dbt.mart_household_monthly_cashflow
+[0m18:05:53.123190 [debug] [Thread-3 (]: Writing injected SQL for node "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m18:05:53.128537 [debug] [Thread-3 (]: Began executing node model.household_income_dbt.mart_household_monthly_cashflow
+[0m18:05:53.227533 [debug] [Thread-3 (]: dbt-sqlserver
+[0m18:05:53.229775 [debug] [Thread-3 (]: Applying DROP to: "dbt_household_data"."dbo"."mart_household_monthly_cashflow__dbt_tmp__dbt_tmp_vw"
+[0m18:05:53.229775 [debug] [Thread-3 (]: dbt-sqlserver
+[0m18:05:53.229775 [debug] [Thread-3 (]: Using sqlserver connection "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m18:05:53.243114 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.mart_household_monthly_cashflow"} */
+
+        USE [dbt_household_data];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'dbt_household_data'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'mart_household_monthly_cashflow__dbt_tmp__dbt_tmp_vw'
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m18:05:53.245130 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:05:53.247132 [debug] [Thread-3 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m18:05:53.248131 [debug] [Thread-3 (]: sqlserver adapter: Connected to db: dbt_household_data
+[0m18:05:53.276374 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:05:53.277225 [debug] [Thread-3 (]: Using sqlserver connection "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m18:05:53.277225 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.mart_household_monthly_cashflow"} */
+
+      
+      
+    
+    USE [dbt_household_data];
+    EXEC('DROP view IF EXISTS "dbo"."mart_household_monthly_cashflow__dbt_tmp__dbt_tmp_vw";');
+
+[0m18:05:53.277225 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:05:53.310356 [debug] [Thread-3 (]: Writing runtime sql for node "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m18:05:53.310356 [debug] [Thread-3 (]: Using sqlserver connection "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m18:05:53.310356 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.mart_household_monthly_cashflow"} */
+
+  
+    USE [dbt_household_data];
+    USE [dbt_household_data];
+    
+    
+
+    
+
+    
+    USE [dbt_household_data];
+    EXEC('
+        CREATE OR ALTER VIEW "dbo"."mart_household_monthly_cashflow__dbt_tmp__dbt_tmp_vw" AS SELECT
+    hh_ids,
+
+    DATEFROMPARTS(
+        YEAR(trx_date),
+        MONTH(trx_date),
+        1
+    ) AS month_start,
+
+    SUM(
+        CASE
+            WHEN trx_direction = ''Inflow''
+            THEN trx_value_kes
+            ELSE 0
+        END
+    ) AS total_inflows_kes,
+
+    SUM(
+        CASE
+            WHEN trx_direction = ''Outflow''
+            THEN trx_value_kes
+            ELSE 0
+        END
+    ) AS total_outflows_kes,
+
+    SUM(
+        CASE
+            WHEN trx_direction IS NULL
+            THEN trx_value_kes
+            ELSE 0
+        END
+    ) AS unknown_direction_amount_kes,
+
+    COUNT(*) AS transaction_count
+
+FROM "dbt_household_data"."dbo"."stg_household_transactions"
+
+GROUP BY
+    hh_ids,
+    DATEFROMPARTS(
+        YEAR(trx_date),
+        MONTH(trx_date),
+        1
+    );
+    ')
+
+EXEC('
+            SELECT * INTO "dbt_household_data"."dbo"."mart_household_monthly_cashflow__dbt_tmp" FROM "dbt_household_data"."dbo"."mart_household_monthly_cashflow__dbt_tmp__dbt_tmp_vw" 
+    OPTION (LABEL = ''dbt-sqlserver'');
+
+        ')
+
+    
+    EXEC('DROP VIEW IF EXISTS "dbo"."mart_household_monthly_cashflow__dbt_tmp__dbt_tmp_vw"')
+
+
+
+    
+    use [dbt_household_data];
+    if EXISTS (
+        SELECT *
+        FROM sys.indexes with (nolock)
+        WHERE name = 'dbo_mart_household_monthly_cashflow__dbt_tmp_cci'
+        AND object_id=object_id('dbo_mart_household_monthly_cashflow__dbt_tmp')
+    )
+    DROP index "dbo"."mart_household_monthly_cashflow__dbt_tmp".dbo_mart_household_monthly_cashflow__dbt_tmp_cci
+    CREATE CLUSTERED COLUMNSTORE INDEX dbo_mart_household_monthly_cashflow__dbt_tmp_cci
+    ON "dbo"."mart_household_monthly_cashflow__dbt_tmp"
+
+   
+
+
+  
+[0m18:05:57.406542 [debug] [Thread-3 (]: SQL status: OK in 4.000 seconds
+[0m18:05:57.423207 [debug] [Thread-3 (]: Using sqlserver connection "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m18:05:57.423207 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.mart_household_monthly_cashflow"} */
+USE [dbt_household_data];
+      EXEC sp_rename 'dbo.mart_household_monthly_cashflow', 'mart_household_monthly_cashflow__dbt_backup'
+[0m18:05:57.739612 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:05:57.756006 [debug] [Thread-3 (]: Using sqlserver connection "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m18:05:57.756006 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.mart_household_monthly_cashflow"} */
+USE [dbt_household_data];
+      EXEC sp_rename 'dbo.mart_household_monthly_cashflow__dbt_tmp', 'mart_household_monthly_cashflow'
+[0m18:05:57.756006 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:05:57.756006 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: COMMIT
+[0m18:05:57.772914 [debug] [Thread-3 (]: Applying DROP to: "dbt_household_data"."dbo"."mart_household_monthly_cashflow__dbt_backup"
+[0m18:05:57.772914 [debug] [Thread-3 (]: Using sqlserver connection "model.household_income_dbt.mart_household_monthly_cashflow"
+[0m18:05:57.772914 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "model.household_income_dbt.mart_household_monthly_cashflow"} */
+
+      
+    USE [dbt_household_data];
+    EXEC('DROP table IF EXISTS "dbo"."mart_household_monthly_cashflow__dbt_backup";');
+
+[0m18:05:57.772914 [debug] [Thread-3 (]: SQL status: OK in 0.000 seconds
+[0m18:05:57.772914 [debug] [Thread-3 (]: On model.household_income_dbt.mart_household_monthly_cashflow: Close
+[0m18:05:57.772914 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd0a92a53-7c72-4705-9bf6-0b2886ae33a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002578124B710>]}
+[0m18:05:57.787741 [info ] [Thread-3 (]: 2 of 2 OK created sql table model dbo.mart_household_monthly_cashflow .......... [[32mOK[0m in 4.68s]
+[0m18:05:57.789651 [debug] [Thread-3 (]: Finished running node model.household_income_dbt.mart_household_monthly_cashflow
+[0m18:05:57.789651 [debug] [MainThread]: On master: COMMIT
+[0m18:05:57.789651 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:05:57.789651 [debug] [MainThread]: Connection 'list_dbt_household_data' was properly closed.
+[0m18:05:57.789651 [debug] [MainThread]: Connection 'list_dbt_household_data_dbo' was properly closed.
+[0m18:05:57.789651 [debug] [MainThread]: Connection 'model.household_income_dbt.stg_household_transactions' was properly closed.
+[0m18:05:57.789651 [debug] [MainThread]: Connection 'model.household_income_dbt.mart_household_monthly_cashflow' was properly closed.
+[0m18:05:57.789651 [info ] [MainThread]: 
+[0m18:05:57.789651 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 5.36 seconds (5.36s).
+[0m18:05:57.789651 [debug] [MainThread]: Command end result
+[0m18:05:57.839482 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\manifest.json
+[0m18:05:57.855886 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\semantic_manifest.json
+[0m18:05:57.855886 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\run_results.json
+[0m18:05:57.855886 [info ] [MainThread]: 
+[0m18:05:57.855886 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:05:57.873472 [info ] [MainThread]: 
+[0m18:05:57.873472 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:05:57.873472 [debug] [MainThread]: Command `dbt run` succeeded at 18:05:57.873472 after 10.10 seconds
+[0m18:05:57.873472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257F8698F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257FF2A5CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257F86D9B10>]}
+[0m18:05:57.873472 [debug] [MainThread]: Flushing usage events
+[0m18:05:59.005016 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:06:10.156718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B5936A2750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B596D48350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B58FF65190>]}
+
+
+============================== 18:06:10.172759 | a6c2264e-5243-475e-9037-ad21ad8ec3b0 ==============================
+[0m18:06:10.172759 [info ] [MainThread]: Running with dbt=1.11.11
+[0m18:06:10.172759 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ADMIN\\.dbt', 'invocation_command': 'dbt test', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ADMIN\\dbt_project\\household_income_pipeline\\household_income_dbt\\logs'}
+[0m18:06:10.881552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a6c2264e-5243-475e-9037-ad21ad8ec3b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B59851B710>]}
+[0m18:06:11.029320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a6c2264e-5243-475e-9037-ad21ad8ec3b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B595F6C110>]}
+[0m18:06:11.029320 [info ] [MainThread]: Registered adapter: sqlserver=1.10.0
+[0m18:06:11.811400 [warn ] [MainThread]: [[33mWARNING[0m]: When True, uses SQL Server-native string type mappings: STRING -> VARCHAR(MAX), NCHAR -> NCHAR(1), NVARCHAR -> NVARCHAR(4000). When False (default), preserves legacy mappings: STRING and NVARCHAR -> VARCHAR(8000), NCHAR -> CHAR(1). The new behaviour is intended to become the default in a future release.
+You may opt into the new behavior sooner by setting `flags.dbt_sqlserver_use_native_string_types` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m18:06:11.811400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'a6c2264e-5243-475e-9037-ad21ad8ec3b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B5987D2010>]}
+[0m18:06:11.827649 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m18:06:12.225700 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:06:12.225700 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:06:12.225700 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:06:12.308924 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a6c2264e-5243-475e-9037-ad21ad8ec3b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B5987D33D0>]}
+[0m18:06:12.525371 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\manifest.json
+[0m18:06:12.525371 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\semantic_manifest.json
+[0m18:06:12.586210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a6c2264e-5243-475e-9037-ad21ad8ec3b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B598B37810>]}
+[0m18:06:12.586210 [info ] [MainThread]: Found 2 models, 2 data tests, 1 source, 522 macros
+[0m18:06:12.586210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a6c2264e-5243-475e-9037-ad21ad8ec3b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B598A83810>]}
+[0m18:06:12.592044 [info ] [MainThread]: 
+[0m18:06:12.592044 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:06:12.595773 [info ] [MainThread]: 
+[0m18:06:12.597785 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m18:06:12.608602 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_dbt_household_data_dbo'
+[0m18:06:12.648836 [debug] [ThreadPool]: dbt-sqlserver
+[0m18:06:12.648836 [debug] [ThreadPool]: Using sqlserver connection "list_dbt_household_data_dbo"
+[0m18:06:12.648836 [debug] [ThreadPool]: On list_dbt_household_data_dbo: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "connection_name": "list_dbt_household_data_dbo"} */
+USE [dbt_household_data];
+    declare @schema_id int = schema_id('dbo');
+    select
+      DB_NAME() as [database],
+      t.name as [name],
+      'dbo' as [schema],
+      'table' as table_type
+    from sys.tables as t with (nolock)
+    where t.schema_id = @schema_id
+    union all
+    select
+      DB_NAME() as [database],
+      v.name as [name],
+      'dbo' as [schema],
+      'view' as table_type
+    from sys.views as v with (nolock)
+    where v.schema_id = @schema_id
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m18:06:12.657296 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:06:12.658650 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m18:06:12.808362 [debug] [ThreadPool]: sqlserver adapter: Connected to db: dbt_household_data
+[0m18:06:12.874974 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:06:12.874974 [debug] [ThreadPool]: On list_dbt_household_data_dbo: ROLLBACK
+[0m18:06:12.874974 [debug] [ThreadPool]: On list_dbt_household_data_dbo: Close
+[0m18:06:12.874974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a6c2264e-5243-475e-9037-ad21ad8ec3b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B598B36510>]}
+[0m18:06:12.889929 [debug] [MainThread]: On master: COMMIT
+[0m18:06:12.891696 [debug] [Thread-1 (]: Began running node test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce
+[0m18:06:12.891696 [debug] [Thread-2 (]: Began running node test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a
+[0m18:06:12.891696 [info ] [Thread-1 (]: 1 of 2 START test source_not_null_household_data_household_transactions_hh_ids . [RUN]
+[0m18:06:12.891696 [info ] [Thread-2 (]: 2 of 2 START test source_not_null_household_data_household_transactions_trx_date  [RUN]
+[0m18:06:12.891696 [debug] [Thread-1 (]: Acquiring new sqlserver connection 'test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce'
+[0m18:06:12.891696 [debug] [Thread-2 (]: Acquiring new sqlserver connection 'test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a'
+[0m18:06:12.891696 [debug] [Thread-1 (]: Began compiling node test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce
+[0m18:06:12.907946 [debug] [Thread-2 (]: Began compiling node test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a
+[0m18:06:12.940502 [debug] [Thread-1 (]: Writing injected SQL for node "test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce"
+[0m18:06:12.941654 [debug] [Thread-2 (]: Writing injected SQL for node "test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a"
+[0m18:06:12.941654 [debug] [Thread-1 (]: Began executing node test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce
+[0m18:06:12.941654 [debug] [Thread-2 (]: Began executing node test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a
+[0m18:06:12.992059 [debug] [Thread-1 (]: Writing runtime sql for node "test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce"
+[0m18:06:13.007856 [debug] [Thread-2 (]: Writing runtime sql for node "test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a"
+[0m18:06:13.008294 [debug] [Thread-2 (]: Using sqlserver connection "test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a"
+[0m18:06:13.008294 [debug] [Thread-1 (]: Using sqlserver connection "test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce"
+[0m18:06:13.008294 [debug] [Thread-2 (]: On test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a"} */
+
+    
+    -- Create target schema if it does not
+  USE [dbt_household_data];
+  IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo')
+  BEGIN
+    EXEC('CREATE SCHEMA [dbo]')
+  END
+
+  
+
+  
+  EXEC('create view 
+    [dbo].[testview_03b9c5a12360e04045d08b8ca6c0c808_1561]
+   as 
+    
+    
+    
+
+
+
+select trx_date
+from "dbt_household_data"."dbo"."household_transactions"
+where trx_date is null
+
+
+
+  ;')
+  select
+    
+    count(*) as failures,
+    case when count(*) != 0
+      then 'true' else 'false' end as should_warn,
+    case when count(*) != 0
+      then 'true' else 'false' end as should_error
+  from (
+    select * from 
+    [dbo].[testview_03b9c5a12360e04045d08b8ca6c0c808_1561]
+  
+  ) dbt_internal_test;
+
+  EXEC('drop view 
+    [dbo].[testview_03b9c5a12360e04045d08b8ca6c0c808_1561]
+  ;')
+[0m18:06:13.015430 [debug] [Thread-1 (]: On test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "household_income_profile", "target_name": "dev", "node_id": "test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce"} */
+
+    
+    -- Create target schema if it does not
+  USE [dbt_household_data];
+  IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dbo')
+  BEGIN
+    EXEC('CREATE SCHEMA [dbo]')
+  END
+
+  
+
+  
+  EXEC('create view 
+    [dbo].[testview_1fb327a8e7fb6aa270165f81fc3c992e_2925]
+   as 
+    
+    
+    
+
+
+
+select hh_ids
+from "dbt_household_data"."dbo"."household_transactions"
+where hh_ids is null
+
+
+
+  ;')
+  select
+    
+    count(*) as failures,
+    case when count(*) != 0
+      then 'true' else 'false' end as should_warn,
+    case when count(*) != 0
+      then 'true' else 'false' end as should_error
+  from (
+    select * from 
+    [dbo].[testview_1fb327a8e7fb6aa270165f81fc3c992e_2925]
+  
+  ) dbt_internal_test;
+
+  EXEC('drop view 
+    [dbo].[testview_1fb327a8e7fb6aa270165f81fc3c992e_2925]
+  ;')
+[0m18:06:13.017440 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m18:06:13.017440 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:06:13.017440 [debug] [Thread-2 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m18:06:13.017440 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=CYNIE\SQLEXPRESS;Database=dbt_household_data;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;trusted_connection=Yes;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.10.0;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m18:06:13.024828 [debug] [Thread-2 (]: sqlserver adapter: Connected to db: dbt_household_data
+[0m18:06:13.024828 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: dbt_household_data
+[0m18:06:13.654004 [debug] [Thread-2 (]: SQL status: OK in 1.000 seconds
+[0m18:06:13.654004 [debug] [Thread-1 (]: SQL status: OK in 1.000 seconds
+[0m18:06:13.657705 [debug] [Thread-2 (]: On test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a: ROLLBACK
+[0m18:06:13.670669 [debug] [Thread-1 (]: On test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce: ROLLBACK
+[0m18:06:13.672680 [debug] [Thread-2 (]: On test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a: Close
+[0m18:06:13.673941 [debug] [Thread-1 (]: On test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce: Close
+[0m18:06:13.674335 [info ] [Thread-2 (]: 2 of 2 PASS source_not_null_household_data_household_transactions_trx_date ..... [[32mPASS[0m in 0.78s]
+[0m18:06:13.674335 [info ] [Thread-1 (]: 1 of 2 PASS source_not_null_household_data_household_transactions_hh_ids ....... [[32mPASS[0m in 0.78s]
+[0m18:06:13.674335 [debug] [Thread-2 (]: Finished running node test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a
+[0m18:06:13.674335 [debug] [Thread-1 (]: Finished running node test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce
+[0m18:06:13.674335 [debug] [MainThread]: On master: COMMIT
+[0m18:06:13.674335 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:06:13.674335 [debug] [MainThread]: Connection 'list_dbt_household_data_dbo' was properly closed.
+[0m18:06:13.674335 [debug] [MainThread]: Connection 'test.household_income_dbt.source_not_null_household_data_household_transactions_hh_ids.2db78a47ce' was properly closed.
+[0m18:06:13.674335 [debug] [MainThread]: Connection 'test.household_income_dbt.source_not_null_household_data_household_transactions_trx_date.87ea0f3d8a' was properly closed.
+[0m18:06:13.674335 [info ] [MainThread]: 
+[0m18:06:13.689618 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 1.08 seconds (1.08s).
+[0m18:06:13.691270 [debug] [MainThread]: Command end result
+[0m18:06:13.757914 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\manifest.json
+[0m18:06:13.775478 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\semantic_manifest.json
+[0m18:06:13.790468 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ADMIN\dbt_project\household_income_pipeline\household_income_dbt\target\run_results.json
+[0m18:06:13.791470 [info ] [MainThread]: 
+[0m18:06:13.791470 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:06:13.791470 [info ] [MainThread]: 
+[0m18:06:13.791470 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:06:13.791470 [debug] [MainThread]: Command `dbt test` succeeded at 18:06:13.791470 after 3.84 seconds
+[0m18:06:13.791470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B598071A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B58FFE8F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B596D3BD10>]}
+[0m18:06:13.791470 [debug] [MainThread]: Flushing usage events
+[0m18:06:15.122867 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,23 @@
+# Data files
+data/
+*.csv
+*.xlsx
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# dbt
+target/
+logs/
+dbt_packages/
+
+# Credentials
+.env
+profiles.yml
+*.key
+
+# Power BI temporary files
+*.tmp

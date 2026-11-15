@@ -1,0 +1,15 @@
+name: household_income_dbt
+version: '1.0.0'
+config-version: 2
+
+profile: household_income_profile
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  household_income_dbt:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
