@@ -10,3 +10,6 @@ dbt_packages/
 .env
 profiles.yml
 *.key
+
+*.csv
+data/
